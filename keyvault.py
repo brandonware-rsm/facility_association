@@ -36,5 +36,5 @@ class KeyVault(object):
         return secrets
 
 
-# my_vault = KeyVault('akv-apipoc-dev')
-# print(my_vault.get_secret('mysecret'))
+my_vault = KeyVault('akv-apipoc-dev')
+print(my_vault.get_secret('mysecret'))
