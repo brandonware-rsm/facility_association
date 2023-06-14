@@ -27,7 +27,7 @@ class DataLakeContainer:
         blob = BlobClient.from_connection_string(conn_str=self.connection_string, container_name=self.container_name,blob_name=blob_name)
         blob_download = blob.download_blob()
         data = blob_download.readall()
-
+        #data = blob_download.readall().decode('utf-8')
         return data
 
     def list_blobs_in_directory(self,directory_path):
