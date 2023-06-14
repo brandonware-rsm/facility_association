@@ -2,6 +2,8 @@ import csv
 import json
 import pandas as pd
 
+
+
 #Premium Layout
 # Set the Variables / input and output file names
 csv_file = 'fa_premium_record_layout.csv'

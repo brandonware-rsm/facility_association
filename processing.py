@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 
+# This cleanse the raw file from the Lake
 class FileCleanse:
     def __init__(self, data):
         self.data = data
@@ -19,6 +20,9 @@ class FileCleanse:
 # print(cleaned_data[0])
 
 
+# This is responsible for parsing the raw file and mapping sheet/ for each row it goes through the entire mapping
+# and assigns the column value to the appropriate value then appends the dictionary to the master list
+# It also converts the list of dictionaries into a df where we convert into csv data
 class FileDelimit:
     def __init__(self,mapping, cleaned_data):
         self.mapping = mapping
