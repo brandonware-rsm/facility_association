@@ -6,12 +6,13 @@ import pandas as pd
 
 #Premium Layout
 # Set the Variables / input and output file names
-csv_file = 'fa_premium_record_layout.csv'
+csv_file = 'C:\Repos\API_Testing\\fa_premium_record_layout.csv'
+#print(csv_file)
 output_file = 'fa_premium_record_layout.json'
 
 # Read the csv file in
 data = pd.read_csv(csv_file,encoding='utf-8')
-#print(data)
+print(data)
 
 # Convert into a list of dictionaries
 dict_list= data.to_dict('records')
@@ -26,7 +27,7 @@ with open(output_file, 'w') as file:
 
 #Claim Record
 # Set the Variables / input and output file names
-csv_file = 'fa_claim_record_layout.csv'
+csv_file = 'C:\Repos\API_Testing\\fa_claim_record_layout.csv'
 output_file = 'fa_claim_record_layout.json'
 
 # Read the csv file in

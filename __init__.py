@@ -13,7 +13,7 @@ my_data_lake = DataLakeContainer(storage_account_name, connection_string, contai
 
 premium_mapping = my_data_lake.read_file_from_data_lake('test/mapping/fa_claim_record_layout.json').decode('utf-8')
 premium_mapping = json.loads(premium_mapping)
-#print(type(premium_mapping))
+# print(type(premium_mapping))
 # print(premium_mapping)
 
 # Getting test raw file
