@@ -10,6 +10,9 @@ from datetime import datetime
 #Both get placed into raw
 
 
+#want it to where if a blob is created, function is triggered and takes the name of the file as a parameter
+
+
 def main():
 
     #Setting mapping sheet
