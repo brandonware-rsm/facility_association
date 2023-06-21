@@ -30,7 +30,7 @@ def main():
     # print(premium_mapping)
 
     # Getting test raw file
-    file_name = 'PAUTO.D23060.V001.C91192'
+    file_name = 'PAUTO.D23032.V001.C91691'#'PAUTO.D23032.V001.C91691'#'TAUTO.D23054.V300.C90693'#'PAUTO.D23060.V001.C91192'
     storage_account_name = 'dlsfadwhdev'
     connection_string = 'DefaultEndpointsProtocol=https;AccountName=dlsfadwhdev;AccountKey=ZJ+p2fUqWsMa0c4Y3+6B9b2efwDclOS+ju4gLNfUsArKb+9bRJWrNudDoibteFrwDcCp5IzpH2Wi+ASt5wfwpA==;EndpointSuffix=core.windows.net'
     container_name = 'tempuipdata'

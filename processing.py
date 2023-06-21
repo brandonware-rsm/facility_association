@@ -41,6 +41,7 @@ class FileDelimit:
                 line[data_element] = value
 
             master_list.append(line)
+            #print(line)
         return master_list
     def generate_dataframe(self,master_list):
         df = pd.DataFrame(master_list)
