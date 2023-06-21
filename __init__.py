@@ -16,7 +16,7 @@ from datetime import datetime
 def main():
 
     #Setting mapping sheet
-    mapping_blob = 'test/mapping/fa_claim_record_layout.json'
+    mapping_blob = 'test/mapping/fa_premium_record_layout.json'
 
     # Getting mapping sheet and convert from string to a list
     storage_account_name = 'dlsfadwhdev'
