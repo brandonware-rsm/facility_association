@@ -3,6 +3,7 @@ from processing import *
 import json
 import pandas as pd
 from datetime import datetime
+from keyvault import *
 
 #Maybe two functions - one for claim, one for premium
 #Loaded in two separate folders 
@@ -15,12 +16,15 @@ from datetime import datetime
 
 def main():
 
+
     #Setting mapping sheet
     mapping_blob = 'test/mapping/fa_premium_record_layout.json'
 
     # Getting mapping sheet and convert from string to a list
     storage_account_name = 'dlsfadwhdev'
-    connection_string = 'DefaultEndpointsProtocol=https;AccountName=dlsfadwhdev;AccountKey=ZJ+p2fUqWsMa0c4Y3+6B9b2efwDclOS+ju4gLNfUsArKb+9bRJWrNudDoibteFrwDcCp5IzpH2Wi+ASt5wfwpA==;EndpointSuffix=core.windows.net'
+    my_vault = KeyVault('kv-fa-dwh-dev')
+    connection_string = my_vault.get_secret('dl-connection-string')
+    # print(my_vault.get_secret('dl-connection-string'))
     container_name = 'fa-data-lake-dev'
     my_data_lake = DataLakeContainer(storage_account_name, connection_string, container_name)
     # print(my_data_lake.storage_account_name)
@@ -31,8 +35,6 @@ def main():
 
     # Getting test raw file
     file_name = 'PAUTO.D23032.V001.C91691'#'PAUTO.D23032.V001.C91691'#'TAUTO.D23054.V300.C90693'#'PAUTO.D23060.V001.C91192'
-    storage_account_name = 'dlsfadwhdev'
-    connection_string = 'DefaultEndpointsProtocol=https;AccountName=dlsfadwhdev;AccountKey=ZJ+p2fUqWsMa0c4Y3+6B9b2efwDclOS+ju4gLNfUsArKb+9bRJWrNudDoibteFrwDcCp5IzpH2Wi+ASt5wfwpA==;EndpointSuffix=core.windows.net'
     container_name = 'tempuipdata'
     my_data_lake_raw_file = DataLakeContainer(storage_account_name, connection_string, container_name)
     # print(my_data_lake.storage_account_name)
