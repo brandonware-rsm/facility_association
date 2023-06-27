@@ -17,6 +17,7 @@ def blob_trigger(myblob: func.InputStream):
                 f"Blob Size: {myblob.length} bytes")
     #Setting mapping sheet
     mapping_blob = 'test/mapping/fa_claim_record_layout.json'
+    parent_folder = 'claim_record'
     # Getting mapping sheet and convert from string to a list
     storage_account_name = 'dlsfadwhdev'
     my_vault = KeyVault('kv-fa-dwh-dev')
@@ -43,13 +44,15 @@ def blob_trigger(myblob: func.InputStream):
     csv_data = premium_delimit_test1.generate_csv_data(df)
 
     #Push csv data into storage account with UIP
-    container_name = 'fa-data-lake-dev'
-    data_lake_landing = DataLakeContainer(storage_account_name, connection_string, container_name)
+    container_name_pii = 'fa-data-lake-pii-dev'
+    data_lake_landing_pii = DataLakeContainer(storage_account_name, connection_string, container_name_pii)
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    data_lake_landing.upload_file_to_data_lake(f'test/raw/with_pii/{file_name}_{timestamp}.csv',csv_data)
+    data_lake_landing_pii.upload_file_to_data_lake(f'{parent_folder}/{file_name}_{timestamp}.csv',csv_data)
 
     #Take out (UIP) columns and push into different directory
+    # container_name = 'fa-data-lake-dev'
+    # data_lake_landing = DataLakeContainer(storage_account_name, connection_string, container_name)
     filtered_columns = [col for col in df.columns if '(UIP)' not in col]
     no_pii_df = df[filtered_columns]
     csv_data_no_pii = premium_delimit_test1.generate_csv_data(no_pii_df)
-    data_lake_landing.upload_file_to_data_lake(f'test/raw/without_pii/{file_name}_{timestamp}.csv',csv_data_no_pii)
+    my_data_lake.upload_file_to_data_lake(f'test/raw/without_pii/{file_name}_{timestamp}.csv',csv_data_no_pii)
