@@ -9,7 +9,7 @@ class KeyVault(object):
         self.KVUri = 'https://'+ vault_name + '.vault.azure.net/'  
         self.credential = DefaultAzureCredential(additionally_allowed_tenants=['*'])
         self.client = SecretClient(vault_url=self.KVUri, credential=self.credential)
-        self.logger = logging.getLogger('func_get_quickbooks_object.keyvault')
+        #self.logger = logging.getLogger('func_get_quickbooks_object.keyvault')
 
     def get_secret(self, secret_name):
 
