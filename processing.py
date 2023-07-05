@@ -7,7 +7,13 @@ class FileCleanse:
         self.data = data
     def decode_file(self):
         coded_data = self.data.decode('utf-8')
-        cleaned_data = coded_data.split('\r\n')
+        if '\r\n' in coded_data:
+            cleaned_data = coded_data.split('\r\n')
+        elif '\n' in coded_data:
+            cleaned_data = coded_data.split('\n')
+        #if len(cleaned_data) == 1:
+        #   cleaned_data = cleaned_data.split('\n')
+        
         return cleaned_data
   
 # test1 = FileCleanse(test_file)
