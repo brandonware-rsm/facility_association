@@ -9,7 +9,7 @@ from keyvault import *
 
 app = func.FunctionApp()
 
-@app.blob_trigger(arg_name="myblob", path="tempuipdata/{name}",#path="fa-data-lake-dev/test/raw/landing/{name}",
+@app.blob_trigger(arg_name="myblob", path="fa-data-lake-dev/test/raw/landing/{name}",
                                connection="dlsfadwhdev_STORAGE") 
 def blob_trigger(myblob: func.InputStream):
     logging.info(f"Python blob trigger function processed blob"
