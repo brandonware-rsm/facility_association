@@ -9,7 +9,7 @@ from keyvault import *
 
 app = func.FunctionApp()
 
-@app.blob_trigger(arg_name="myblob", path="fa-data-lake-dev/test/raw/landing/{name}",
+@app.blob_trigger(arg_name="myblob", path="tempuipdata/{name}",#path="fa-data-lake-dev/test/raw/landing/{name}",
                                connection="dlsfadwhdev_STORAGE") 
 def blob_trigger(myblob: func.InputStream):
     logging.info(f"Python blob trigger function processed blob"
@@ -21,10 +21,13 @@ def blob_trigger(myblob: func.InputStream):
     premium_values = ['1','2','3','4','J','K','L','M']
 
     #file name
-    file_name = myblob.name.rsplit('/',1)[-1]#'PAUTO.D23032.V001.C90791' #premium#'PAUTO.D23118.V001.C91192'#claim  #'PAUTO.D23037.V001.C90791'
-
+    file_name = myblob.name.rsplit('/',1)[-1]
+    file_path = 'test/raw/landing/'+ str(myblob.name.rsplit('/',1)[-1])#'PAUTO.D23032.V001.C90791' #premium#'PAUTO.D23118.V001.C91192'#claim  #'PAUTO.D23037.V001.C90791'
+    
+    # file_name = 'test/raw/landing/PAUTO.D23118.V001.C91192'
     # Getting test raw file
     container_name = 'tempuipdata'
+    #container_name = 'fa-data-lake-dev'
     storage_account_name = 'dlsfadwhdev'
     my_vault = KeyVault('kv-fa-dwh-dev')
     connection_string = my_vault.get_secret('dl-connection-string')
@@ -48,7 +51,6 @@ def blob_trigger(myblob: func.InputStream):
     my_data_lake = DataLakeContainer(storage_account_name, connection_string, container_name)
     mapping_file = my_data_lake.read_file_from_data_lake(mapping_blob).decode('utf-8')
     mapping_file = json.loads(mapping_file)
-
     #Delimit cleaned file
     premium_delimit_test1 = FileDelimit(mapping_file,cleaned_data)
     master_list = premium_delimit_test1.parse_text()
