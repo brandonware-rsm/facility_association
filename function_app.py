@@ -64,3 +64,5 @@ def process_raw_files(myblob: func.InputStream):
     no_pii_df = df[filtered_columns]
     csv_data_no_pii = premium_delimit_test1.generate_csv_data(no_pii_df)
     my_data_lake.upload_file_to_data_lake(f'test/raw/{parent_folder}/{file_name}_{timestamp}.csv',csv_data_no_pii)
+    return print('Success')
+
