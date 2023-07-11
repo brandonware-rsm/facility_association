@@ -26,13 +26,13 @@ def blob_trigger(myblob: func.InputStream):
     
     # file_name = 'test/raw/landing/PAUTO.D23118.V001.C91192'
     # Getting test raw file
-    container_name = 'tempuipdata'
-    #container_name = 'fa-data-lake-dev'
+    # container_name = 'tempuipdata'
+    container_name = 'fa-data-lake-dev'
     storage_account_name = 'dlsfadwhdev'
     my_vault = KeyVault('kv-fa-dwh-dev')
     connection_string = my_vault.get_secret('dl-connection-string')
     my_data_lake_raw_file = DataLakeContainer(storage_account_name, connection_string, container_name)
-    raw_file = my_data_lake_raw_file.read_file_from_data_lake(file_name)
+    raw_file = my_data_lake_raw_file.read_file_from_data_lake(file_path)
     #Cleanse file into list
     file1 = FileCleanse(raw_file)
     cleaned_data = file1.decode_file()
