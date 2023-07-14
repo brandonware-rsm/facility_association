@@ -1,0 +1,125 @@
+Table,Data Element,Format,From,To
+Submission Control,Record Format Version Number,Num,1,3
+Submission Control,For future use,Char,4,4
+Submission Control,CompanyIdentification,Char,5,7
+Submission Control,EntryDate,CCYYMM,8,13
+Submission Control,StatisticalPlan,Char,14,14
+Submission Control,For future use,Char,15,15
+Submission Control,TransactionType,Char,16,16
+Submission Control,UIP Transaction Type (UIP),Char,17,17
+Submission Control,ProcessingDate (UIP),CCYYMMDD,18,25
+Submission Control,SequenceNumber (UIP),Num,26,31
+Submission Control,For future use,,32,40
+Policy,PolicyControlID,Char,41,42
+Policy,PolicyIdentificationDigit,Char,43,43
+Policy,PolicyIdentification,Char,44,63
+Policy,PolicyEffectiveDate,CCYYMMDD,64,71
+Policy,EndorsementCancellationDate,CCYYMMDD,72,79
+Policy,PolicyExpiryDate,CCYYMMDD,80,87
+Policy,NoFrillsIndicator,Char,88,88
+Policy,For future use,Char,89,89
+Policy,RejectingCompanyIdentification,Char,90,92
+Policy,GroupMarketingIndicator,Char,93,93
+Policy,For future use,,94,103
+Policyholder,Policyholder Surname (UIP),Char,104,133
+Policyholder,Policyholder First Name (UIP),Char,134,148
+Policyholder,Policyholder Middle Name/Initial (UIP),Char,149,163
+Policyholder,Policyholder Street Address (UIP),Char,164,203
+Policyholder,Policyholder City (UIP),Char,204,233
+Policyholder,Policyholder Province (UIP),Char,234,235
+Policyholder,Policyholder Postal Code (UIP),Char,236,241
+Policyholder,For future use,,242,249
+Vehicle,CommutingDistanceOneWay,Char,250,252
+Vehicle,AnnualDrivingDistance,Char,253,258
+Vehicle,BusinessUsePercentage,Char,259,261
+Vehicle,VehicleCode,Char,262,267
+Vehicle,VehicleModelYear,CCYY,268,271
+Vehicle,StatisticalTerritory,Char,272,274
+Vehicle,VehicleLocationPostalCode,Char,275,277
+Vehicle,TypeOfBusiness,Char,278,278
+Vehicle,TypeOfUse,Char,279,280
+Vehicle,Exposure,Num,281,285
+Vehicle,TrailerIndicator,Char,286,286
+Vehicle,GridIndicator,Char,287,287
+Vehicle,VehicleUse,Char,288,288
+Vehicle,NumberOfOtherOperators,Char,289,289
+Vehicle,OtherOperatorNumberOfYearsLicensed,Char,290,290
+Vehicle,Vehicle Indicator (UIP),Num,291,293
+Vehicle,Vehicle Identification Number - VIN (UIP),Char,294,313
+Vehicle,Registrant Identification Number - RIN (UIP),Char,314,333
+Vehicle,Policy Vehicle Status (UIP),Char,334,335
+Vehicle,Mandatory Coverage Indicator (UIP),Char,336,336
+Vehicle,ThirdPartyLiabilityDrivingRecord,Char,337,337
+Vehicle,AccidentBenefitsDrivingRecord,Char,338,338
+Vehicle,CollisionAllPerilsDrivingRecord,Char,339,339
+Vehicle,DCPDRateGroupType,Char,340,340
+Vehicle,DCPDRateGroup,Num,341,342
+Vehicle,AccidentBenefitsRateGroupType,Char,343,343
+Vehicle,AccidentBenefitsRateGroup,Num,344,345
+Vehicle,CollisionAllPerilsRateGroupType,Char,346,346
+Vehicle,CollisionAllPerilsRateGroup,Num,347,348
+Vehicle,ComprehensiveSpecifiedPerilsRateGroupType,Char,349,349
+Vehicle,ComprehensiveSpecifiedPerilsRateGroup,Num,350,351
+Vehicle,MultiCarDiscountIndicator,Char,352,352
+Vehicle,MultiLineDiscountIndicator,Char,353,353
+Vehicle,RenewalDiscountIndicator,Char,354,354
+Vehicle,WinterTireDiscountIndicator,Char,355,355
+Vehicle,Winter Tire Discount,Char,356,358
+Operator,RatedOperatorMaritalStatus,Char,359,359
+Operator,RatedOperatorNumberOfClaims,Char,360,360
+Operator,RatedOperatorNumberOfYearsClaimsFree,Num,361,362
+Operator,RatedOperatorYearOfBirth,CCYY,363,366
+Operator,RatedOperatorGender,Char,367,367
+Operator,RatedOperatorNumberOfYearsLicensed,Num,368,369
+Operator,RatedOperatorDriverTraining,Char,370,370
+Operator,FirstChanceNewDriverDiscount,Char,371,371
+Operator,RetireeDiscount,Num,372,374
+Operator,CleanDriverIndicator,Char,375,375
+Operator,DriverRemedialTraining,Char,376,376
+Operator,InsuranceFraudConvictions,Char,377,377
+Operator,NumberOfAccidents,Char,378,378
+Operator,NumberOfTypeAConvictions,Char,379,379
+Operator,NumberOfTypeBConvictions,Char,380,380
+Operator,NumberOfTypeCConvictions,Char,381,381
+Operator,OperatorGridLevel,Char,382,384
+Operator,Principal Operator Surname (UIP),Char,385,414
+Operator,Principal Operator First Name (UIP),Char,415,429
+Operator,Principal Operator Middle Name/Initial (UIP),Char,430,444
+Operator,Principal Operator Driver License Number (UIP),Char,445,464
+Operator,Principal Operator Driver License Number Jurisdiction (UIP),Char,465,466
+Operator,For future use,,467,476
+Coverage,ThirdPartyLiabilityCoverageCode,Char,477,478
+Coverage,ThirdPartyLiabilityLimitCode,Char,479,479
+Coverage,ThirdPartyLiabilityLimitAmount,Num,480,487
+Coverage,ThirdPartyLiabilityPremium,Num,488,493
+Coverage,ThirdPartyLiabilityBICoverageCode,Char,494,495
+Coverage,ThirdPartyLiabilityBIPremium,Num,496,501
+Coverage,ThirdPartyLiabilityPDCoverageCode,Char,502,503
+Coverage,ThirdPartyLiabilityPDPremium,Num,504,509
+Coverage,DCPDCoverageCode,Char,510,511
+Coverage,DCPDDeductibleCode,Char,512,513
+Coverage,DCPDDeductibleAmount,Num,514,520
+Coverage,DCPDPremium,Num,521,526
+Coverage,UninsuredAutomobileCoverage,Char,527,528
+Coverage,UninsuredAutomobilePremium,Num,529,534
+Coverage,UnderinsuredMotoristCoverageCode,Char,535,536
+Coverage,UnderinsuredMotoristCoverageLimitAmount,Num,537,544
+Coverage,UnderinsuredMotoristPremium,Num,545,550
+Coverage,AccidentBenefitsCoverageCode,Char,551,552
+Coverage,AccidentBenefitsPremium,Num,553,558
+Coverage,CollisionAllPerilsCoverageCode,Char,559,561
+Coverage,CollisionAllPerilsDeductibleAmount,Num,562,568
+Coverage,CollisionAllPerilsPremium,Num,569,574
+Coverage,ComprehensiveSpecifiedPerilsCoverageCode,Char,575,577
+Coverage,ComprehensiveSpecifiedPerilsDeductibleAmount,Num,578,584
+Coverage,ComprehensiveSpecifiedPerilsPremium,Num,585,590
+Coverage,AddedCoverageToOffsetTortDeductible,Char,591,591
+Coverage,ABOptionalCoverageMandR,Char,592,592
+Coverage,ABOptionalCoverageAC,Char,593,593
+Coverage,ABOptionalCoverageCHandHM,Char,594,594
+Coverage,ABOptionalCoverageIR,Char,595,595
+Coverage,ABOptionalCoverageDC,Char,596,596
+Coverage,ABOptionalCoverageDandF,Char,597,597
+Coverage,ABOptionalCoverageI,Char,598,598
+Coverage,ABOptionalCoverageMRandAC,Char,599,599
+Coverage,ABOptionalCoverageCI,Char,600,600

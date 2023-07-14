@@ -1,0 +1,109 @@
+Table,Data Element,Format,From,To
+Submission Control,Record Format Version Number,Num,1,3
+Submission Control,For future use,Char,4,4
+Submission Control,CompanyIdentification,Char,5,7
+Submission Control,EntryDate,CCYYMM,8,13
+Submission Control,StatisticalPlan,Char,14,14
+Submission Control,For future use,Char,15,15
+Submission Control,TransactionType,Char,16,16
+Submission Control,UIP Transaction Type (UIP),Char,17,17
+Submission Control,ProcessingDate (UIP),CCYYMMDD,18,25
+Submission Control,SequenceNumber (UIP),Num,26,31
+Submission Control,For future use,,32,40
+Policy,PolicyControlID,Char,41,42
+Policy,PolicyIdentificationDigit,Char,43,43
+Policy,PolicyIdentification,Char,44,63
+Policy,PolicyEffectiveDate,CCYYMMDD,64,71
+Policy,NoFrillsIndicator,Char,72,72
+Policy,GroupMarketingIndicator,Char,73,73
+Policy,For future use,,74,83
+Policyholder,Policyholder Surname (UIP),Char,84,113
+Policyholder,Policyholder First Name (UIP),Char,114,128
+Policyholder,Policyholder Middle Name/Initial (UIP),Char,129,143
+Policyholder,For future use,,144,151
+Vehicle,CommutingDistanceOneWay,Char,152,154
+Vehicle,AnnualDrivingDistance,Char,155,160
+Vehicle,BusinessUsePercentage,Char,161,163
+Vehicle,VehicleCode,Char,164,169
+Vehicle,VehicleModelYear,CCYY,170,173
+Vehicle,StatisticalTerritory,Char,174,176
+Vehicle,VehicleLocationPostalCode,Char,177,179
+Vehicle,TypeOfBusiness,Char,180,180
+Vehicle,TypeOfUse,Char,181,182
+Vehicle,TrailerIndicator,Char,183,183
+Vehicle,GridIndicator,Char,184,184
+Vehicle,VehicleUse,Char,185,185
+Vehicle,NumberOfOtherOperators,Char,186,186
+Vehicle,OtherOperatorNumberOfYearsLicensed,Char,187,187
+Vehicle,First Party Vehicle Indicator (UIP),Num,188,190
+Vehicle,First Party Vehicle Identification Number (UIP),Char,191,210
+Vehicle,ClaimDrivingRecord,Char,211,211
+Vehicle,ClaimCoverageRateGroupType,Char,212,212
+Vehicle,ClaimCoverageRateGroup,Num,213,214
+Vehicle,MultiCarDiscountIndicator,Char,215,215
+Vehicle,MultiLineDiscountIndicator,Char,216,216
+Vehicle,RenewalDiscountIndicator,Char,217,217
+Vehicle,WinterTireDiscountIndicator,Char,218,218
+Vehicle,Winter Tire Discount,Char,219,221
+Vehicle,For future use,,222,230
+Operator,RatedOperatorMaritalStatus,Char,231,231
+Operator,RatedOperatorNumberOfClaims,Char,232,232
+Operator,RatedOperatorNumberOfYearsClaimsFree,Num,233,234
+Operator,RatedOperatorYearOfBirth,CCYY,235,238
+Operator,RatedOperatorGender,Char,239,239
+Operator,RatedOperatorNumberOfYearsLicensed,Num,240,241
+Operator,RatedOperatorDriverTraining,Char,242,242
+Operator,FirstChanceNewDriverDiscount,Char,243,243
+Operator,RetireeDiscount,Num,244,246
+Operator,CleanDriverIndicator,Char,247,247
+Operator,DriverRemedialTraining,Char,248,248
+Operator,InsuranceFraudConvictions,Char,249,249
+Operator,NumberOfAccidents,Char,250,250
+Operator,NumberOfTypeAConvictions,Char,251,251
+Operator,NumberOfTypeBConvictions,Char,252,252
+Operator,NumberOfTypeCConvictions,Char,253,253
+Operator,OperatorGridLevel,Char,254,256
+Coverage,AddedCoverageToOffsetTortDeductible,Char,257,257
+Coverage,ABOptionalCoverageMandR,Char,258,258
+Coverage,ABOptionalCoverageAC,Char,259,259
+Coverage,ABOptionalCoverageCHandHM,Char,260,260
+Coverage,ABOptionalCoverageIR,Char,261,261
+Coverage,ABOptionalCoverageDC,Char,262,262
+Coverage,ABOptionalCoverageDandF,Char,263,263
+Coverage,ABOptionalCoverageI,Char,264,264
+Coverage,ABOptionalCoverageMRandAC,Char,265,265
+Coverage,ABOptionalCoverageCI,Char,266,266
+Claim Detail,ClaimControlID,Char,267,268
+Claim Detail,ClaimIdentificationDigit,Char,269,269
+Claim Detail,ClaimIdentification,Char,270,289
+Claim Detail,AccidentDate,CCYYMMDD,290,297
+Claim Detail,ClaimCount,Num,298,298
+Claim Detail,KindOfLoss,Char,299,301
+Claim Detail,ClaimCoverageCode,Char,302,304
+Claim Detail,ExcludedDriver,Char,305,305
+Claim Detail,ThirdPartyLiabilityLimitCode,Char,306,306
+Claim Detail,ClaimCoverageLimitAmount,Num,307,314
+Claim Detail,ClaimDCPDDeductibleCode,Char,315,316
+Claim Detail,ClaimDeductibleAmount,Num,317,323
+Claim Detail,FirstPartyVehicleTotalLossIndicator,Char,324,324
+Claim Detail,LossAmount,Num,325,331
+Claim Detail,ExpenseAmount,Num,332,338
+Claim Detail,ABCatastrophicImpairmentIndicator,Char,339,339
+Claim Detail,ABMinorInjuryIndicator,Char,340,340
+Claim Detail,For future use,,341,348
+Claim Participant,First Party Accident Driver Surname (UIP),Char,349,378
+Claim Participant,First Party Accident Driver First Name (UIP),Char,379,393
+Claim Participant,First Party Accident Driver Middle Name/Initial (UIP),Char,394,408
+Claim Participant,First Party Accident Driver License Number (UIP),Char,409,428
+Claim Participant,First Party Accident Driver License Number Jurisdiction (UIP),Char,429,430
+Claim Participant,First Party Degree at Fault (UIP),Num,431,433
+Claim Participant,Third Party Accident Driver Surname (UIP),Char,434,463
+Claim Participant,Third Party Accident Driver First Name (UIP),Char,464,478
+Claim Participant,Third Party Accident Driver Middle Name/Initial (UIP),Char,479,493
+Claim Participant,Third Party Accident Driver License Number (UIP),Char,494,513
+Claim Participant,Third Party Accident Driver License Number Jurisdiction (UIP),Char,514,515
+Claim Participant,For future use,,516,516
+Claim Participant,Third Party Insuring Company Identification (UIP),Char,517,519
+Claim Participant,Third Party Policy Identification (UIP),Char,520,539
+Claim Participant,Third Party Vehicle Utilization Type (UIP),Char,540,540
+Claim Participant,For future use,,541,600
